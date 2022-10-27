@@ -2,7 +2,7 @@
 Simples exemplo de listagem, inicialização e parada de serviços Windows com C#.
 
 # Objetivo
-Este projeto apresenta de forma simples como controlar serviços do Windows utilizando C#.
+Simples aplicattivo que demonstra como listar os serviços do Windows e controlar a sua execução.
 
 ## Feedback
 
