@@ -32,11 +32,12 @@
             this.btnStop = new System.Windows.Forms.Button();
             this.lbxServices = new System.Windows.Forms.ListBox();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.btnRestart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(224, 218);
+            this.btnStart.Location = new System.Drawing.Point(143, 218);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 9;
@@ -72,6 +73,16 @@
             this.lblStatus.TabIndex = 22;
             this.lblStatus.Text = "Status";
             // 
+            // btnRestart
+            // 
+            this.btnRestart.Location = new System.Drawing.Point(224, 218);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(75, 23);
+            this.btnRestart.TabIndex = 9;
+            this.btnRestart.Text = "Restart";
+            this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,6 +91,7 @@
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lbxServices);
             this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnStart);
             this.MaximizeBox = false;
             this.Name = "Main";
@@ -97,6 +109,7 @@
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.ListBox lbxServices;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnRestart;
     }
 }
 

@@ -1,0 +1,9 @@
+D:\_DADOS\GIT-HUB\servicescontrol-csharp\src\ServicesControl\bin\Debug\ServicesControl.exe.config
+D:\_DADOS\GIT-HUB\servicescontrol-csharp\src\ServicesControl\bin\Debug\ServicesControl.exe
+D:\_DADOS\GIT-HUB\servicescontrol-csharp\src\ServicesControl\bin\Debug\ServicesControl.pdb
+D:\_DADOS\GIT-HUB\servicescontrol-csharp\src\ServicesControl\obj\Debug\ServicesControl.Main.resources
+D:\_DADOS\GIT-HUB\servicescontrol-csharp\src\ServicesControl\obj\Debug\ServicesControl.Properties.Resources.resources
+D:\_DADOS\GIT-HUB\servicescontrol-csharp\src\ServicesControl\obj\Debug\ServicesControl.csproj.GenerateResource.cache
+D:\_DADOS\GIT-HUB\servicescontrol-csharp\src\ServicesControl\obj\Debug\ServicesControl.csproj.CoreCompileInputs.cache
+D:\_DADOS\GIT-HUB\servicescontrol-csharp\src\ServicesControl\obj\Debug\ServicesControl.exe
+D:\_DADOS\GIT-HUB\servicescontrol-csharp\src\ServicesControl\obj\Debug\ServicesControl.pdb

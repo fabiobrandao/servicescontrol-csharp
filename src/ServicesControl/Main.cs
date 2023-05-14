@@ -75,7 +75,11 @@ namespace ServicesControl
 
                 selectedService.Start();
 
-                selectedService.WaitForStatus(ServiceControllerStatus.Running);
+                TimeSpan timeout = TimeSpan.FromMilliseconds(1000);
+
+                selectedService.WaitForStatus(ServiceControllerStatus.Running, timeout);
+
+                lblStatus.Text = selectedService.Status.ToString();
 
                 MessageBox.Show(string.Format("The " + selectedService.DisplayName + " service status is now set to {0}.", selectedService.Status.ToString()));
             }
@@ -93,13 +97,47 @@ namespace ServicesControl
 
                 selectedService.Stop();
 
-                selectedService.WaitForStatus(ServiceControllerStatus.Stopped);
+                TimeSpan timeout = TimeSpan.FromMilliseconds(1000);
+
+                selectedService.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+
+                lblStatus.Text = selectedService.Status.ToString();
 
                 MessageBox.Show(string.Format("The " + selectedService.DisplayName + " service status is now set to {0}.", selectedService.Status.ToString()));
             }
             catch (InvalidOperationException)
             {
                 MessageBox.Show("Could not stop the service.");
+            }
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (selectedService == null) return;
+
+                int tickCount1 = Environment.TickCount;
+                int tickCount2 = Environment.TickCount;
+                
+                TimeSpan timeout = TimeSpan.FromMilliseconds(1000);
+
+                selectedService.Start();
+
+                selectedService.Stop();
+                selectedService.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+
+                timeout = TimeSpan.FromMilliseconds(1000 - (tickCount1 - tickCount2));
+                selectedService.Start();
+                selectedService.WaitForStatus(ServiceControllerStatus.Running, timeout);
+
+                lblStatus.Text = selectedService.Status.ToString();
+
+                MessageBox.Show(string.Format("The " + selectedService.DisplayName + " service status is now set to {0}.", selectedService.Status.ToString()));
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Could not start the service.");
             }
         }
     }
